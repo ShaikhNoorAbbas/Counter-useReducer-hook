@@ -6,7 +6,7 @@ const App = () => {
   const [state, dispatch] = useReducer(method, 0);
   return (
     <React.Fragment>
-      {/* <h1> Counter Using useReducer Hook </h1>
+      <h1> Counter Using useReducer Hook 🙂</h1>
       <br />
       <br />
       <br />
@@ -15,8 +15,8 @@ const App = () => {
       <button onClick={() => { dispatch({ type: "minus" }) }}>Click - 1</button>
       <br />
       <br />
-      <button onClick={() => { dispatch({ type: "reset" }) }}> Reset to 0 </button> */}
-      <Counter/>
+      <button onClick={() => { dispatch({ type: "reset" }) }}> Reset to 0 </button>
+      <Counter />
     </React.Fragment>
   );
 };
