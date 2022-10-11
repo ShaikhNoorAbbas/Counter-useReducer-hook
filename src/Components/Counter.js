@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import "./Counter.css"
 
 const initialState = {
@@ -18,6 +18,10 @@ const method = (state, action) => {
 };
 const Counter = () => {
     const [state, dispatch] = useReducer(method, initialState);
+    useEffect(() => {
+        console.log("Rendered !!");
+        document.title = `Counter Value ${state.count}`
+    }, [state]);
     return (
         <>
             <h1>Counter using object useReducer 🤨</h1>

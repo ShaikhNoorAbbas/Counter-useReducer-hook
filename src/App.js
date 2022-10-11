@@ -1,9 +1,13 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 
 import "./App.css";
 import Counter from "./Components/Counter";
 const App = () => {
   const [state, dispatch] = useReducer(method, 0);
+  useEffect(() => {
+    console.log("Rendered!!");
+    document.title = `Counter Value ${state}`;
+  }, [state]);
   return (
     <React.Fragment>
       <h1> Counter Using useReducer Hook 🙂</h1>
